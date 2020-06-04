@@ -30,7 +30,7 @@ CREATE TABLE `categories` (
   `name` varchar(255)
 );
 
-ALTER TABLE `presentations` ADD FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
+ALTER TABLE `presentations` ADD FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
 
 ALTER TABLE `slides` ADD FOREIGN KEY (`presentation_id`) REFERENCES `presentations` (`id`);
 
