@@ -25,7 +25,7 @@ CREATE TABLE `slides_types` (
   `layout` varchar(255)
 );
 
-CREATE TABLE `category` (
+CREATE TABLE `categories` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255)
 );
