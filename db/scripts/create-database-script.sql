@@ -12,11 +12,11 @@ CREATE TABLE `slides` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `presentation_id` int,
   `heading` varchar(255),
-  `text` varchar(255),
-  `list` json,
-  `codeblock` text,
-  `photo` varchar(255),
-  `order` int,
+  `text_area` varchar(255) DEFAULT NULL,
+  `list_json` json DEFAULT NULL,
+  `codeblock` text DEFAULT NULL,
+  `photo` varchar(255) DEFAULT NULL,
+  `ordering` int,
   `type_id` int
 );
 
