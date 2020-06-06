@@ -12,7 +12,7 @@ are set to READ & WRITE.
 
 define("FILE_MAX_SIZE", 50000000);
 
-function uploadImage(&$valid, &$errors)
+function uploadFile(&$valid, &$errors)
 {
     $target_dir = "./uploads/"; // TODO: change this
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
