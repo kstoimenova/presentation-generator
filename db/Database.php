@@ -18,6 +18,7 @@ class Database
             ]);
 
         } catch(PDOException $error) {
+            echo "Problem with db query  - " . $error->getMessage(); //NOTE: only for debugging if needed. TODO: DELETE on the final version
             die("Failed to connect to database");
         }
     }
