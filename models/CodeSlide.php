@@ -1,8 +1,11 @@
 <?php
 
-require('BaseSlide.php');
+namespace models;
 
-class CodeSlide extends BaseSlide {
+include_once 'BaseSlide.php';
+use BaseSlide;
+
+class CodeSlide extends BaseSlide implements Slide {
     
     private $codeBlock;
     

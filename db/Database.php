@@ -1,5 +1,7 @@
 <?php
 
+namespace db;
+
 class Database
 {
     private $connection;
@@ -12,12 +14,12 @@ class Database
         $userName = "root";
         $userPassword = "";
 
-        $this->connection = new PDO("mysql:host=$dbhost;dbname=$dbName", $userName, $userPassword,
+        $this->connection = new \PDO("mysql:host=$dbhost;dbname=$dbName", $userName, $userPassword,
             [
-                PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
+                \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
             ]);
 
-        } catch(PDOException $error) {
+        } catch(\PDOException $error) {
             echo "Problem with db query  - " . $error->getMessage(); //NOTE: only for debugging if needed. TODO: DELETE on the final version
             die("Failed to connect to database");
         }

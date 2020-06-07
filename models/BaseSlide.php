@@ -1,5 +1,6 @@
 <?php
 
+namespace models;
 class BaseSlide {
 
     private $id;

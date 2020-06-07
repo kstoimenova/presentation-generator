@@ -5,23 +5,22 @@ namespace models;
 include_once 'BaseSlide.php';
 use BaseSlide;
 
-class TextSlide extends BaseSlide implements Slide {
-    
-    private $text;
+class ListSlide extends BaseSlide implements Slide {
+
+    private $list;
     
     const HTML_LAYOUT = ''; // TODO: 
 
-    public function __construct($text) {
+    public function __construct($list) {
         parent::init();
-        $this->text = $text;
+        $this->list = $list;
     }
 
-    public function getText() {
-        return $this->text;
+    public function getList() {
+        return $this->list;
     }
 
     public function getHtmlLayout() {
         return HTML_LAYOUT;
     }
-
 }
