@@ -37,7 +37,7 @@
         $presentationDao = new PresentationDao();
 
         foreach($categories as $category) {
-            echo '<button class="category" id="btn' . $category->getName() . '">' . $category->getName() . '</button>
+            echo '<button class="category category' . $category->getId() . '">' . $category->getName() . '</button>
             <div class="presentations">';
             $presentations = $presentationDao->getPresentationByCategoryId($category->getId());
             foreach($presentations as $presentation) {
@@ -46,7 +46,6 @@
             echo '</div>';
         }
     ?>
-    <button class="category">Категория 1</button>
 
     </div>
         
