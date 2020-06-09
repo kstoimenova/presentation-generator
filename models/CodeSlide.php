@@ -9,15 +9,6 @@ class CodeSlide extends BaseSlide implements Slide {
     
     private $codeBlock;
     
-    const HTML_LAYOUT = '<section>
-    <h2><?php echo $this->heading ?></h2>
-    <pre>
-    <code>
-    <?php echo $this->codeBlock ?>
-    </code>
-  </pre>
- </section>'; // TODO: 
-
     public function __construct($id, $presentationId, $heading, $ordering, $codeBlock) {
         parent::__construct($id, $presentationId, $heading, $ordering);
         $this->codeBlock = $codeBlock;
@@ -28,7 +19,18 @@ class CodeSlide extends BaseSlide implements Slide {
     }
 
     public function getHtmlLayout() {
-        return self::HTML_LAYOUT;
+        return '<section>
+        <h2>' . $this->getHeading() . '</h2>
+        <div class="codeSlide">
+        <pre class="code">
+        <textarea readonly>
+        ' .
+        $this->getCodeBlock() 
+         .
+        '</textarea>
+        </pre>
+        </div>
+     </section>';
     }
 
 }

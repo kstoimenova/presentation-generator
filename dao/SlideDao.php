@@ -5,9 +5,6 @@ namespace dao;
 include_once '../db/Database.php';
 use db\Database;
 
-// include_once 'PresentationDao.php';
-// use PresentationDao;
-
 include_once '../models/TextSlide.php';
 include_once '../models/CodeSlide.php';
 include_once '../models/ListSlide.php';
