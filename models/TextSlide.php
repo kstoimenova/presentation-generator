@@ -3,16 +3,20 @@
 namespace models;
 
 include_once 'BaseSlide.php';
-use BaseSlide;
+include_once 'Slide.php';
+// use BaseSlide;
 
 class TextSlide extends BaseSlide implements Slide {
     
     private $text;
     
-    const HTML_LAYOUT = ''; // TODO: 
+    const HTML_LAYOUT = '<section>
+                            <h2><?php echo $this->heading ?></h2>
+                            <p><?php echo $this->text ?></p>
+                         </section>'; // TODO: 
 
-    public function __construct($text) {
-        parent::init();
+    public function __construct($id, $presentationId, $heading, $ordering, $text) {
+        parent::__construct($id, $presentationId, $heading, $ordering);
         $this->text = $text;
     }
 
@@ -21,7 +25,7 @@ class TextSlide extends BaseSlide implements Slide {
     }
 
     public function getHtmlLayout() {
-        return HTML_LAYOUT;
+        return self::HTML_LAYOUT;
     }
 
 }

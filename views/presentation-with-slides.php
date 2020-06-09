@@ -2,11 +2,16 @@
 	mb_internal_encoding("UTF-8");
 
 	include '../dao/PresentationDao.php';
-	use dao\PresentationDao;
+    use dao\PresentationDao;
+    
+    include '../dao/SlideDao.php';
+	use dao\SlideDao;
 
     $presentationDao = new PresentationDao();
+    $slideDao = new SlideDao();
  
     $presentation = $presentationDao->getPresentationById(1);
+    $slides = $slideDao->getSlidesByPresentationId(1);
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +22,20 @@
     <title>Presentation</title>
 </head>
 <body>
-	<?php var_dump($presentation) ?>
+<table>
+		<tr>
+			<th>Заглавие</th>
+			<th>Поредност</th>
+			<th>Съдържание</th>
+		</tr>
+		<?php foreach($slides as $slide) {?>
+		<tr>
+			<td><?php echo $slide->getHeading(); ?></td>
+			<td><?php echo $slide->getOrdering(); ?></td>
+			<td><?php echo $slide->getHtmlLayout(); ?></td>
+		</tr>
+		<?php } ?>
+</table>
     
 </body>
 </html>
