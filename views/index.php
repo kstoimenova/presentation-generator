@@ -19,5 +19,36 @@
         </div>
     </header>
 
+    <div class="categories">
+
+    <?php
+        mb_internal_encoding("UTF-8");
+
+        include '../dao/CategoryDao.php';
+        use dao\CategoryDao;
+    
+        $categoryDao = new CategoryDao();
+     
+        $categories = $categoryDao->getAllCategories();
+
+        include '../dao/PresentationDao.php';
+        use dao\PresentationDao;
+    
+        $presentationDao = new PresentationDao();
+
+        foreach($categories as $category) {
+            echo '<button class="category" id="btn' . $category->getName() . '">' . $category->getName() . '</button>
+            <div class="presentations">';
+            $presentations = $presentationDao->getPresentationByCategoryId($category->getId());
+            foreach($presentations as $presentation) {
+                echo '<a href="#">' . $presentation->getName() . '</a>';
+            }
+            echo '</div>';
+        }
+    ?>
+    <button class="category">Категория 1</button>
+
+    </div>
+        
 </body>
 </html>

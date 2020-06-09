@@ -46,4 +46,22 @@ class PresentationDao
         }
         return $presentation;
     }
+
+    public function getPresentationByCategoryId($category_id) {
+        try {
+            $sql = "SELECT id, name, category_id, path FROM presentations WHERE category_id = :category_id";
+            $stmt = self::$db->getConnection()->prepare($sql);
+            $stmt->execute(['category_id' => $category_id]);
+
+            $presentations = array();
+            while($row = $stmt->fetch(\PDO::FETCH_ASSOC)){
+                $categoryFromDb = self::$categoryDao->getCategoryById($row['category_id']);
+                $presentation = new Presentation($row["id"], $row["name"], $categoryFromDb->getName(), $row["path"]);
+                $presentations[] = $presentation;
+            } 
+        } catch (\PDOException $e) {
+            throw $e;
+        }
+        return $presentations;
+    }
 }
