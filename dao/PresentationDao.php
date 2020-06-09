@@ -9,7 +9,6 @@ include_once '../models/Presentation.php';
 use models\Presentation;
 
 include_once 'CategoryDao.php';
-use CategoryDao;
 
 /**
  * Class PresentationDao

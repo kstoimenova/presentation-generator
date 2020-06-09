@@ -9,11 +9,11 @@ class BaseSlide {
     private $ordering;
     private $type; // type as a string, used for the visualisation
 
-    public function __construct($id, $heading, $ordering, $type) {
+    public function __construct($id, $presentationId, $heading, $ordering) {
         $this->id = $id;
+        $this->presentationId = $presentationId;
         $this->heading = $heading;
         $this->ordering = $ordering;
-        $this->type = $type;
     }
 
     public function getPresentationId() {
