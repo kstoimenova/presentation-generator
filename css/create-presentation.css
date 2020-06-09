@@ -1,0 +1,45 @@
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.invalid {
+    display: none;
+    color: red;
+}
+
+.form {
+    margin-top: 50px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.heading {
+    text-align: center;
+}
+
+.btn {
+    float: right;
+    background-color: rgb(29, 32, 30);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.success {
+    display: none;
+    color: green;
+    text-align: center;
+    margin-left: 30%;
+}
