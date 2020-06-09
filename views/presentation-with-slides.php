@@ -28,18 +28,28 @@
     <title>Presentation</title>
 </head>
 <body>
-    <h1 class="heading"><?php echo $presentation->getName(); ?></h1>
-    <div class="presentation-nav">
-        <ol>
-        <?php foreach ($presentationContent as $title) {
-			echo '<li>'. $title .'</li>';
-        } ?>
-        </ol>
-    </div>
+<!-- presentation content -->
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <ol>
+    <?php foreach ($presentationContent as $title) {
+        echo '<li><a href="'.$title. '">'. $title .'</a></li>';
+    } ?>
+    </ol>
+</div>
 
-		<?php foreach ($slides as $slide) {?>
-			<div><?php echo $slide->getHtmlLayout(); ?></div>
-		<?php } ?>
-    
+<div id="main">
+<!-- navbar -->
+    <?php
+    require_once "./navbar.html";
+    ?>
+
+    <h1 class="heading"><?php echo $presentation->getName(); ?></h1>
+
+	<?php foreach ($slides as $slide) {?>
+        <div><?php echo $slide->getHtmlLayout(); ?></div>
+    <?php } ?>
+</div>
+    <script src="./static/js/content-sidebar.js"></script>
 </body>
 </html>
