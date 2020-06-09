@@ -11,7 +11,6 @@ class Presentation {
     private $content; // array with the headings of the slides in correct order
     private $slides; // array with the slides in correct order
 
-
     public function __construct($id, $name, $category, $pathToFile) {
         $this->id = $id;
         $this->name = $name;
@@ -19,6 +18,10 @@ class Presentation {
         $this->pathToFile = $pathToFile;
     }
 
+    public function getId() {
+        return $this->id;
+    }
+    
     public function getName() {
         return $this->name;
     }
@@ -35,7 +38,15 @@ class Presentation {
         return $this->content;
     }
 
+    public function setContent($content) {
+        $this->content = $content;
+    }
+
     public function getSlides() {
         return $this->slides;
+    }
+
+    public function setSlides($slides) {
+        $this->slides = $slides;
     }
 }

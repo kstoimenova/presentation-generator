@@ -15,13 +15,27 @@ class ListSlide extends BaseSlide implements Slide {
     }
 
     public function getList() {
-        return $this->list;
+        $listJson = json_decode($this->list, true);
+        return $listJson;
+    }
+
+    private function getListAsHtml() {
+        echo '<ul>';
+        foreach($this->getList() as $item){
+          echo '<li>'.$item.'</li>';
+        }
+        echo '</ul>';
     }
 
     public function getHtmlLayout() {
-        return '<section>
+        return '<section class="slide">
         <h2>' . $this->getHeading() . '</h2>
-        <p>' .  $this->getList() . '</p>
+        <div class="list">' 
+        .
+        $this->getListAsHtml()
+        .
+        '</div>
      </section>';
     }
+
 }

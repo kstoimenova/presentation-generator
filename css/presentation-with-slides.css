@@ -1,7 +1,32 @@
+body {
+    background-color: #ff4d4d3f;
+    background-image: linear-gradient(to right, #ff4d4d62, #9900cc54);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-size: 42px;
+    text-transform: uppercase;
+}
+
 .code {
-    font-family: Consolas,"courier new";
-    color: crimson;
-    background-color: #f1f1f1;
-    padding: 2px;
-    font-size: 105%;
+    background-color: #eee;
+    border: 1px solid #999;
+    color: rgb(43, 39, 39);
+    display: block;
+    padding: 20px;
+    overflow-wrap: break-word;
+}
+
+.slide {
+    display: block;
+    margin-bottom: 30px;
+    max-width: 100%;
+    overflow-x: auto;
+    font-size: 19px;
+    background-color: whitesmoke;
 }

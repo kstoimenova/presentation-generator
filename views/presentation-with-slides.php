@@ -7,11 +7,16 @@
     include '../dao/SlideDao.php';
     use dao\SlideDao;
 
+    include '../controllers/PresentationController.php';
+    use controllers\PresentationController;
+
     $presentationDao = new PresentationDao();
     $slideDao = new SlideDao();
+    $presentationController = new PresentationController();
  
     $presentation = $presentationDao->getPresentationById(1);
-    $slides = $slideDao->getSlidesByPresentationId(1);
+    $slides = $slideDao->getSlidesByPresentationId($presentation->getId());
+    $presentationContent = $presentationController->constructPresentationContent($presentation->getId());
 ?>
 
 <!DOCTYPE html>
@@ -23,12 +28,18 @@
     <title>Presentation</title>
 </head>
 <body>
-    <h1><?php echo $presentation->getName(); ?></h1>
+    <h1 class="heading"><?php echo $presentation->getName(); ?></h1>
+    <div class="presentation-nav">
+        <ol>
+        <?php foreach ($presentationContent as $title) {
+			echo '<li>'. $title .'</li>';
+        } ?>
+        </ol>
+    </div>
 
 		<?php foreach ($slides as $slide) {?>
 			<div><?php echo $slide->getHtmlLayout(); ?></div>
 		<?php } ?>
-</table>
     
 </body>
 </html>

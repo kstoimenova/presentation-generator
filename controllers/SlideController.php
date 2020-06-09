@@ -11,8 +11,4 @@ class SlideController {
         self::$slideDao = new SlideDao();
     }
 
-    public function constructHTMLlayout() {
-        
-    }
-
 }
