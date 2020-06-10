@@ -38,18 +38,23 @@
     </ol>
 </div>
 
-<div id="main">
 <!-- navbar -->
-    <?php
+<?php
     require_once "./navbar.html";
-    ?>
+?>
 
+<div id="main">
+
+    <div class="content">
     <h1 class="heading"><?php echo $presentation->getName(); ?></h1>
-
+    <?php if (count($slides) == 0) echo 'This presentation has no slides.'; ?>
 	<?php foreach ($slides as $slide) {?>
         <div><?php echo $slide->getHtmlLayout(); ?></div>
     <?php } ?>
+    </div>
+
 </div>
+
     <script src="./static/js/content-sidebar.js"></script>
 </body>
 </html>
