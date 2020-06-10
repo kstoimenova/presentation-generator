@@ -20,21 +20,23 @@ class ListSlide extends BaseSlide implements Slide {
     }
 
     private function getListAsHtml() {
-        echo '<ul>';
+        $content = '';
         foreach($this->getList() as $item){
-          echo '<li>'.$item.'</li>';
+          $content = $content . '<li>'.$item.'</li>';
         }
-        echo '</ul>';
+        return $content;
     }
 
     public function getHtmlLayout() {
-        return '<section class="slide">
+        return '<section class="slide" id="'.$this->getId().'">
         <h2>' . $this->getHeading() . '</h2>
-        <div class="list">' 
+        <div class="list">
+        <ul>' 
         .
         $this->getListAsHtml()
         .
-        '</div>
+        '</ul>
+        </div>
      </section>';
     }
 

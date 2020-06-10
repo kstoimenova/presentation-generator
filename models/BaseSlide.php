@@ -16,6 +16,10 @@ class BaseSlide {
         $this->ordering = $ordering;
     }
 
+    public function getId() {
+        return $this->id;
+    }
+
     public function getPresentationId() {
         return $this->presentationId;
     }
