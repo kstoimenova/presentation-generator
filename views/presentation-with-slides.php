@@ -13,10 +13,12 @@
     $presentationDao = new PresentationDao();
     $slideDao = new SlideDao();
     $presentationController = new PresentationController();
+
+    $presentationId = $presentationController->getPresentationIdFromUrl();
  
-    $presentation = $presentationDao->getPresentationById(1);
-    $slides = $slideDao->getSlidesByPresentationId($presentation->getId());
-    $presentationContent = $presentationController->constructPresentationContent($presentation->getId());
+    $presentation = $presentationDao->getPresentationById($presentationId);
+    $slides = $slideDao->getSlidesByPresentationId($presentationId);
+    $presentationContent = $presentationController->constructPresentationContent($presentationId);
 ?>
 
 <!DOCTYPE html>

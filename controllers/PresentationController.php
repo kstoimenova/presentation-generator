@@ -30,4 +30,12 @@ class PresentationController {
 
         return $presentation->getContent();
     }
+
+    public function getPresentationIdFromUrl() {
+        $queries = array();
+        parse_str($_SERVER['QUERY_STRING'], $queries);
+        $id = $queries['id'];
+
+        return $id;
+    }
 }
