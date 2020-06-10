@@ -15,7 +15,7 @@
                     bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
                 </p>
             </div>
-            <a href="#" class="upload-btn">Качи презентация</a>
+            <a href="create-presentation.php" class="upload-btn">Качи презентация</a>
         </div>
     </header>
 
@@ -30,6 +30,7 @@
         $categoryDao = new CategoryDao();
      
         $categories = $categoryDao->getAllCategories();
+        krsort($categories);
 
         include '../dao/PresentationDao.php';
         use dao\PresentationDao;
@@ -37,11 +38,13 @@
         $presentationDao = new PresentationDao();
 
         foreach($categories as $category) {
-            echo '<button class="category category' . $category->getId() . '">' . $category->getName() . '</button>
+            echo '<button class="category" id="category' . $category->getId() . '">'
+             . $category->getName() . '</button>
             <div class="presentations">';
             $presentations = $presentationDao->getPresentationByCategoryId($category->getId());
             foreach($presentations as $presentation) {
-                echo '<a href="#">' . $presentation->getName() . '</a>';
+                echo '<a href="presentation-with-slides.php?id=' . $presentation->getId()
+                 . '" id="presentation' . $presentation->getId() . '">' . $presentation->getName() . '</a>';
             }
             echo '</div>';
         }
