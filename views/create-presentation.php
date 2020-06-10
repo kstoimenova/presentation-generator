@@ -19,9 +19,9 @@
 </head>
 
 <body>
-    <form action="" id="form" method="POST" class="form">
+    <form action="../utils/import.php" id="form" method="POST" class="form" enctype="multipart/form-data">
         <h1 class="heading">Създай презентация</h1>
-        <input type="text" id="username" name="username" placeholder="Заглавие" required>
+        <input type="text" id="heading" name="heading" placeholder="Заглавие" required>
         <br>
         <select name="category" id="category">
             <option value="category" disabled selected  >Категория</option>
@@ -34,7 +34,7 @@
                 ?>
         </select>
         <br>
-        <input type="file" id="file-upload" name="file-upload" placeholder="Файл с презентация">
+        <input type="file" id="file" name="fileToUpload" placeholder="Файл с презентация">
         <br>
         <input type="submit" value="Submit" class="btn">
     </form>

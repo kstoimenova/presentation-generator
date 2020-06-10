@@ -52,13 +52,9 @@
 
     </div>
 
-    <footer>
-        <div class="footer-content">
-        <p>© Copyright 2020</p>
-        <p>Deniza Topalova, Katrin Stoimenova, Maria Vardzhieva</p>
-        <p>All Rights Reserved</p>
-        </div>
-    </footer>
+    <?php
+        require "footer.html";
+    ?>
         
 </body>
 </html>
