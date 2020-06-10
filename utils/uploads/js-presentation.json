@@ -1,0 +1,30 @@
+[{
+        "heading": "Scope в JavaScript",
+        "type": "withCodeBlock",
+        "codeblock": "var x = 3, y = 5\n function test (){\n if (true) {\n var y = 6;\n }\n console.log(y); // 6\n z = 8;\n for (var i = 0; i < 10; i++){\n  // do something\n }\n console.log(i); // 10\n }\ntest();\n console.log(i); // undefined\n console.log(x, y, z); // 3 5 8"
+    },
+    {
+        "heading": "Patterns",
+        "type": "withText",
+        "text": "Както във много други езици винаги е добре да не замърсявате глобалния scope с много глобални променливи и функции. Namespace или модул може да се направи като просто имаме обект (хеш) и в него държим релевантни променливи и функции. Друго решение на проблема е като просто направим анонимна функция и я извикаме и така тя си има собствен scope. Можем и да ги комбинираме и така можем да получим нещо като обект с private променливи."
+    },
+    {
+        "heading": "What is this?",
+        "type": "withText",
+        "codeblock": "Едно от странните неща за някои начинаещи javascript developer-и e this. Простата версия - this е нещото пред точката на obj.func() - obj. То обаче се оценява в момента на извикване - преди това можем да го сменим. Можем да го сменим по 4 начина:\n  foo.func = func - закачаме функцията и към друг обект\n func.call(bar, arg1, arg2, arg3) - експлицитно задаваме контекста при извикването\nfunc.apply(bar, [arg1, arg2, arg3]) - същото, но аргументите са в масив\nvar bound = func.bind(b) - фиксираме this към даден обект завинаги (ES5)"
+    },
+    {
+        "heading": "ES6 Features",
+        "type": "withList",
+        "list": [
+            "1. let + const",
+            "2. Arrow functions",
+            "Default function params",
+            "rest param, spread operator",
+            "Template literals",
+            "Destructuring operations",
+            "Native promises",
+            "Classes"
+        ]
+    }
+]
