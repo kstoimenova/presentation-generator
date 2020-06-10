@@ -44,10 +44,6 @@ if($_POST){
         $slideDao->save($presentationId, $slideHeading, $slideText, $slideList, $slideCodeblock, $slidePhoto, $order, $slideTypeId);
     }
 
-    // header("Location: ../views/presentaion-with-slides.php");
-    // exit;
-    
-
-
-
+    header("Location:../views/presentation-with-slides.php?id=".$presentationId);
+    exit();
 }
