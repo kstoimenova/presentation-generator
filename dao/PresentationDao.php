@@ -63,4 +63,20 @@ class PresentationDao
         }
         return $presentations;
     }
+
+        
+    public function save($name, $categoryId, $path){
+        try{
+            $sql = "INSERT INTO presentations (name, category_id, path)
+            VALUES (?, ?, ?);";
+            $stmt = self::$db->getConnection()->prepare($sql);
+            $stmt->execute(array($name, $categoryId, $path));
+
+            $presentationId = self::$db->getConnection()->lastInsertId();
+        } catch(\PDOException $e){
+            throw $e;
+        }
+        
+        return $presentationId;
+    }
 }
