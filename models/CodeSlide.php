@@ -19,7 +19,7 @@ class CodeSlide extends BaseSlide implements Slide {
     }
 
     public function getHtmlLayout() {
-        return '<section class="slide">
+        return '<section class="slide" id="'.$this->getId().'">
         <h2>' . $this->getHeading() . '</h2>
         <div class="codeSlide">
         <pre class="code">

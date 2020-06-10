@@ -36,7 +36,9 @@ nav>ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgba(175, 174, 174, 0.863);
+    background-color: #ff4d4d;
+    background-image: linear-gradient(to right, #ff4d4d, #9900cc);
+    background: rgba(0, 0, 0, 0.6);
   }
   
  nav>ul>li {
@@ -52,17 +54,17 @@ nav>ul {
   }
   
   li a:hover:not(.active) {
-    background-color: rgba(206, 203, 203, 0.87);
+    background-color: rgba(243, 241, 241, 0.829);
   }
   
   .sidebar {
     height: 100%;
     width: 0;
     position: fixed;
+    right: 0px;
     z-index: 1;
     top: 0;
-    left: 0;
-    background-color: #111;
+    background-color: rgb(190, 190, 190);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -92,18 +94,18 @@ nav>ul {
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background-color: #9900cc;
     color: white;
     padding: 10px 15px;
     border: none;
   }
   
   .openbtn:hover {
-    background-color: #444;
+    background-color: #ff6699;
   }
   
   #main {
-    transition: margin-left .5s;
+    transition: margin-right .5s;
     padding: 16px;
   }
   

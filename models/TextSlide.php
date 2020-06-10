@@ -20,7 +20,7 @@ class TextSlide extends BaseSlide implements Slide {
     }
 
     public function getHtmlLayout() {
-        return '<section class="slide">
+        return '<section class="slide" id="'.$this->getId().'">
         <h2>' . $this->getHeading() . '</h2>
         <p>' .  $this->getText() . '</p>
      </section>';

@@ -19,16 +19,12 @@ class PresentationController {
 
         usort($slides, function($a, $b) {return strcmp($a->getOrdering(), $b->getOrdering());}); // sort slides so they will be in the right order
 
-        $content = array();
-
+        $content = '';
         foreach ($slides as $slide) {
-            $content[] = $slide->getHeading();
+            $content = $content . '<li><a href="#'.$slide->getId().'">'. $slide->getHeading() .'</a></li>';
         }
 
-        $presentation->setContent($content);
-        $presentation->setSlides($slides);
-
-        return $presentation->getContent();
+        return $content;
     }
 
     public function getPresentationIdFromUrl() {

@@ -1,0 +1,11 @@
+/* footer */
+
+footer {
+    padding: 2% 0% 3% 0%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.footer-content {
+    color: white;
+    text-align: center;
+}
