@@ -65,4 +65,16 @@ class SlideDao
         }
         return $slides;
     }
+
+    public function save($presentationId, $heading, $text, $list, $codeblock, $photo, $order, $typeId){
+        try{
+            $sql = "INSERT INTO slides (presentation_id, heading, text_area, list_json, codeblock, photo, ordering, type_id)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            $stmt = self::$db->getConnection()->prepare($sql);
+            $stmt->execute(array($presentationId, $heading, $text, $list, $codeblock, $photo, $order, $typeId));
+        } catch(\PDOException $e){
+            throw $e;
+        }
+        
+    }
 }
