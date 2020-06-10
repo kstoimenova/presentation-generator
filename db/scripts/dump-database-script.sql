@@ -20,6 +20,7 @@ INSERT INTO Presentations_generator.slides_types (id, layout) VALUES (4, "withPh
 -- DUMP PRESENTATIONS --
 INSERT INTO Presentations_generator.presentations (name, category_id, path) VALUES ("Test HTML presentation", 2, "../uploads/");
 INSERT INTO Presentations_generator.presentations (name, category_id, path) VALUES ("Test JavaScript presentation", 5, "../uploads/");
+INSERT INTO Presentations_generator.presentations (name, category_id, path) VALUES ("Test JavaScript presentation2", 5, "../uploads/");
 
 -- DUMP SLIDES --
 INSERT INTO Presentations_generator.slides (presentation_id, heading, text_area, list_json, codeblock, photo, ordering, type_id) 

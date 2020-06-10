@@ -60,6 +60,7 @@ a {
     padding: 0.7% 1.7%;
     margin: 2%;
     width: -moz-available;
+    width: -webkit-fill-available;
     color: white;
     font-size: 18px;
     font-weight: 600;
