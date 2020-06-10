@@ -8,6 +8,9 @@ body {
     margin: 0;
 }
 
+
+/* header */
+
 header {
     padding: 2% 0% 3% 0%;
     background: rgba(0, 0, 0, 0.6);
@@ -51,6 +54,9 @@ a {
     text-decoration: none;
 }
 
+
+/* categories */
+
 .categories {
     background: rgba(0, 0, 0, 0.6);
     margin: 5% 20% 5%;
@@ -60,6 +66,7 @@ a {
     padding: 0.7% 1.7%;
     margin: 2%;
     width: -moz-available;
+    width: -webkit-fill-available;
     color: white;
     font-size: 18px;
     font-weight: 600;
@@ -92,4 +99,17 @@ a {
 
 .presentations a:hover {
     background-color: #ddd;
+}
+
+
+/* footer */
+
+footer {
+    padding: 2% 0% 3% 0%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.footer-content {
+    color: white;
+    text-align: center;
 }
