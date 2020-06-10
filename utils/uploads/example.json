@@ -1,0 +1,25 @@
+[{
+        "heading": "Solid",
+        "type": "withText",
+        "text": "blablabla"
+    },
+    {
+        "heading": "scrum",
+        "type": "withText",
+        "text": "bla."
+    },
+    {
+        "heading": "scrum",
+        "type": "withCodeblock",
+        "codeblock": "console.log() \n console.log()"
+    },
+    {
+        "heading": "scrum",
+        "type": "withList",
+        "list": [
+            "This is very long",
+            "description",
+            "Yeah, life is hard \n very hard"
+        ]
+    }
+]
