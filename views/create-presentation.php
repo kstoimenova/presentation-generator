@@ -50,16 +50,43 @@
 
                     </div>   
                 </form>
-                
-            </div>
-            <div class="column-right">
                 <div class="img-container">
                     <img src="static/images/add-presentation.jpg" alt="">
                     <div class="bottom-right">Presentations made easy.</div>
                 </div>
-
             </div>
-        
+            <div class="column-right">
+                <pre class="code">
+                <code>
+[
+    {
+        "heading": "Solid",
+        "type": "withText",
+        "text": "blablabla"
+    },
+    {
+        "heading": "scrum",
+        "type": "withText",
+        "text": "bla."
+    },
+    {
+        "heading": "scrum",
+        "type": "withCodeblock",
+        "codeblock": "console.log() \n console.log()"
+    },
+    {
+        "heading": "scrum",
+        "type": "withList",                 
+        "list": [
+                 "This is very long",
+                 "description",
+                 "Yeah, life is hard \n very hard"
+        ]
+    }
+]
+                </code>
+                </pre>
+            </div>      
     </div>
     </div>
 
