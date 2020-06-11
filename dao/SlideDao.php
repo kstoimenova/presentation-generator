@@ -63,6 +63,8 @@ class SlideDao
         } catch (\PDOException $e) {
             throw $e;
         }
+        
+        usort($slides, function($a, $b) {return strcmp($a->getOrdering(), $b->getOrdering());}); // sort slides so they will be in the right order
         return $slides;
     }
 

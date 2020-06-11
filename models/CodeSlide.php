@@ -6,7 +6,6 @@ include_once 'BaseSlide.php';
 include_once 'Slide.php';
 
 class CodeSlide extends BaseSlide implements Slide {
-    
     private $codeBlock;
     
     public function __construct($id, $presentationId, $heading, $ordering, $codeBlock) {
@@ -15,7 +14,7 @@ class CodeSlide extends BaseSlide implements Slide {
     }
 
     public function getCodeBlock() {
-        return $this->codeBlock;
+        return htmlentities($this->codeBlock);
     }
 
     public function getHtmlLayout() {
@@ -23,14 +22,15 @@ class CodeSlide extends BaseSlide implements Slide {
         <h2>' . $this->getHeading() . '</h2>
         <div class="codeSlide">
         <pre class="code">
-        <textarea readonly>
+        <code>
         ' .
-        $this->getCodeBlock() 
+        $this->getCodeBlock()
          .
-        '</textarea>
+        '</code>
         </pre>
         </div>
      </section>';
     }
 
+    
 }
