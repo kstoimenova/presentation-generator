@@ -27,7 +27,7 @@ if($_POST){
     $valid = array();
     $errors = array();
     
-    $uploadedImagePath = uploadFile($valid, $errors);
+    $uploadedImagePath = substr(uploadFile($valid, $errors), 1);
 
     if(count($errors) == 0 ){
         $presentationDao = new PresentationDao();
@@ -35,7 +35,6 @@ if($_POST){
     
         $slideTypeDao = new SlideTypeDao();
         $slideDao = new SlideDao();
-        
         $fileContents = file_get_contents(__DIR__ . $uploadedImagePath);
     
         $slides = json_decode($fileContents,true);
