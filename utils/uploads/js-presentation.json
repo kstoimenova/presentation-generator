@@ -11,7 +11,7 @@
     {
         "heading": "What is this?",
         "type": "withText",
-        "codeblock": "Едно от странните неща за някои начинаещи javascript developer-и e this. Простата версия - this е нещото пред точката на obj.func() - obj. То обаче се оценява в момента на извикване - преди това можем да го сменим. Можем да го сменим по 4 начина:\n  foo.func = func - закачаме функцията и към друг обект\n func.call(bar, arg1, arg2, arg3) - експлицитно задаваме контекста при извикването\nfunc.apply(bar, [arg1, arg2, arg3]) - същото, но аргументите са в масив\nvar bound = func.bind(b) - фиксираме this към даден обект завинаги (ES5)"
+        "text": "Едно от странните неща за някои начинаещи javascript developer-и e this. Простата версия - this е нещото пред точката на obj.func() - obj. То обаче се оценява в момента на извикване - преди това можем да го сменим. Можем да го сменим по 4 начина:\n  foo.func = func - закачаме функцията и към друг обект\n func.call(bar, arg1, arg2, arg3) - експлицитно задаваме контекста при извикването\nfunc.apply(bar, [arg1, arg2, arg3]) - същото, но аргументите са в масив\nvar bound = func.bind(b) - фиксираме this към даден обект завинаги (ES5)"
     },
     {
         "heading": "ES6 Features",
@@ -19,12 +19,12 @@
         "list": [
             "1. let + const",
             "2. Arrow functions",
-            "Default function params",
-            "rest param, spread operator",
-            "Template literals",
-            "Destructuring operations",
-            "Native promises",
-            "Classes"
+            "3. Default function params",
+            "4. rest param, spread operator",
+            "5. Template literals",
+            "6. Destructuring operations",
+            "7. Native promises",
+            "8. Classes"
         ]
     }
 ]

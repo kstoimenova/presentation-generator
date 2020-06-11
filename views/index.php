@@ -38,6 +38,7 @@
         $presentationDao = new PresentationDao();
 
         foreach($categories as $category) {
+            echo '<div class="drop-down">';
             echo '<button class="category" id="category' . $category->getId() . '">'
              . $category->getName() . '</button>
             <div class="presentations">';
@@ -46,6 +47,7 @@
                 echo '<a href="presentation-with-slides.php?id=' . $presentation->getId()
                  . '" id="presentation' . $presentation->getId() . '">' . $presentation->getName() . '</a>';
             }
+            echo '</div>';
             echo '</div>';
         }
     ?>
