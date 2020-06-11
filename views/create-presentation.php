@@ -65,30 +65,33 @@
                             <code>
 [
         {
-            "heading": "Solid",
-            "type": "withText",
-            "text": "blablabla"
+            "heading": "Форми",
+            "type": "withText", // !! Note: Възможните типове
+             слайдове са предефинирани и са обозначени 
+             в „Легенда“, в самата форма 
+            "text": "примерен текст"
         },
         {
-            "heading": "scrum",
+            "heading": "Тагове",
             "type": "withText",
-            "text": "bla."
+            "text": "примерен текст"
         },
         {
-            "heading": "scrum",
+            "heading": "Код на форма",
             "type": "withCodeblock",
-            "codeblock": "console.log() \n console.log()"
+            "codeblock": "
+            console.log() \n
+            console.log()"
         },
         {
-            "heading": "scrum",
+            "heading": "Допълнителни тагове",
             "type": "withList",                 
             "list": [
-                "This is very long",
-                "description",
-                "Yeah, life is hard \n very hard"
-                ]
-        }
-]
+                "input",
+                "label"
+             ]
+         }
+ ]
         </code>
     </pre>
 
@@ -100,9 +103,7 @@
 *heading - заглавие на слайда
                             </p>
                             <p class="comment">
-*type - тип на слайда,  
- под формата на 
- текст, лист или код
+*type - тип на слайда; възможни стойности: -текст("withText"), -лист("withList"), -код("withCodeblock")
                             </p>
                             <p class="comment">
                                 *text - стринг
