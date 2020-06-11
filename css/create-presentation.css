@@ -40,7 +40,6 @@ select {
     float: right;
     padding: 2.5% 2.5%;
     background-color: #9900cc;
-    margin-top: 4em;
     border: 3px solid transparent;
     color: white;
     font-size: 19px;
@@ -89,10 +88,11 @@ img {
 .frame {
     /* margin: 27px; */
     background-color: rgba(0, 0, 0, 0.6);
-    margin-top: 3%;
-    margin-left: 7%;
-    margin-right: 7%;
-    height: 80%;
+    /* margin-top: 3%; */
+    /* margin-left: 7%; */
+    /* margin-right: 7%; */
+    /* height: 80%; */
+    margin: 5% 10%;
 }
 
 .header {
@@ -158,12 +158,20 @@ input[type="file"] {
 }
 
 .code {
-    background-color: #eee;
+    /* background-color: #eee; */
+    background: rgba(255, 255, 255, 0.8);
     border: 1px solid #999;
     border-radius: 50px 20px;
     color: rgb(43, 39, 39);
     display: block;
-    padding: 20px;
+    padding: 10px;
     overflow-wrap: break-word;
-    font-size: 16px;
-  }
+    font-size: 14px;
+    margin: 2% 20%;
+    width: fit-content;
+}
+
+.info {
+    color: white;
+    text-align: center;
+}

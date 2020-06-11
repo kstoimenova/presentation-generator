@@ -50,12 +50,13 @@
 
                     </div>   
                 </form>
-                <div class="img-container">
+                <!-- <div class="img-container">
                     <img src="static/images/add-presentation.jpg" alt="">
                     <div class="bottom-right">Presentations made easy.</div>
-                </div>
+                </div> -->
             </div>
             <div class="column-right">
+            <p class="info">Поредността на слайдовете в .json файла се запазва при генерирането на презентацията.</p>
                 <pre class="code">
                 <code>
 [
@@ -88,7 +89,7 @@
                 </pre>
             </div>      
     </div>
-    </div>
+</div>
 
     
 
