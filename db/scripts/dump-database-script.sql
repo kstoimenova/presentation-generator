@@ -24,7 +24,7 @@ INSERT INTO Presentations_generator.presentations (name, category_id, path) VALU
 
 -- DUMP SLIDES --
 INSERT INTO Presentations_generator.slides (presentation_id, heading, text_area, list_json, codeblock, photo, ordering, type_id) 
-VALUES (1, 'Форми', NULL, NULL, '<form method="post" action="/add-course.php"> <label for="course-title"> Course Title </label> <input id="course-title" name="title">..<button disabled> Submit </button></form>',
+VALUES (1, 'Форми', NULL, NULL, "<form method='post' action='/add-course.php'> \n <label for='course-title'> Course Title </label> \n <input id='course-title' name='title'>.. \n <button disabled> Submit </button> \n </form>",
 NULL, 1, 3);
 
 INSERT INTO Presentations_generator.slides (presentation_id, heading, text_area, list_json, codeblock, photo, ordering, type_id) 
