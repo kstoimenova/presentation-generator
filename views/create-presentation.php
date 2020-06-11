@@ -19,26 +19,52 @@
 </head>
 
 <body>
-    <form action="../utils/import.php" id="form" method="POST" class="form" enctype="multipart/form-data">
-        <h1 class="heading">Създай презентация</h1>
-        <input type="text" id="heading" name="heading" placeholder="Заглавие" required>
-        <br>
-        <select name="category" id="category">
-            <option value="category" disabled selected  >Категория</option>
-            <?php
-					 foreach ($categories as $category) {
-							 ?>
-							 <option value="<?php echo $category->getId(); ?>"> <?= $category->getName() ?> </option>
-							 <?php
-					}
-                ?>
-        </select>
-        <br>
-        <input type="file" id="file" name="fileToUpload" placeholder="Файл с презентация">
-        <br>
-        <input type="submit" value="Submit" class="btn">
-    </form>
+<div class="frame">
+        <div class="row">
+            <div class="column-left">
+                <form action="../utils/import.php" id="form" method="POST" enctype="multipart/form-data">
+                    <h1 class="heading">Създай презентация</h1>
+                    <input type="text" id="heading" name="heading" placeholder="Заглавие" required>
+                    <br>
+                    <select name="category" id="category">
+                        <option value="category" disabled selected  >Категория</option>
+                        <?php
+                                foreach ($categories as $category) {
+                                        ?>
+                                        <option value="<?php echo $category->getId(); ?>"> <?= $category->getName() ?> </option>
+                                        <?php
+                                }
+                            ?>
+                    </select>
+                    <div class="row">
+                        <div class="column-left">
+                            <br>
+                            <input type="file" id="file" name="fileToUpload" placeholder="Файл с презентация">
+                        </div>
+                        <div class="column-right">
+                        <br>
+                        <input type="submit" value="Генерирай" class="btn">
 
+                        </div>
+
+                    </div>   
+                </form>
+                
+            </div>
+            <div class="column-right">
+                <div class="img-container">
+                    <img src="static/images/add-presentation.jpg" alt="">
+                    <div class="bottom-right">Presentations made easy.</div>
+                </div>
+
+            </div>
+        
+    </div>
+    </div>
+
+    
+
+    
 </body>
 
 </html>
