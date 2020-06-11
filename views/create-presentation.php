@@ -37,15 +37,16 @@
                             ?>
                     </select>
                     <div class="row">
-                        <div class="column-left">
+                        <div class="file-container">
                             <br>
-                            <input type="file" id="file" name="fileToUpload" placeholder="Файл с презентация" required>
+                            <label id="file-upload-label" for="file-upload" class="custom-file-upload">
+                                <input id="file-upload" type="file" name="fileToUpload" required>
+                                Качи файл
+                            </label>
+                            <span id="file-name">Не е избран файл</span>
                         </div>
-                        <div class="column-right">
                         <br>
                         <input type="submit" value="Генерирай" class="btn">
-
-                        </div>
 
                     </div>   
                 </form>
@@ -64,7 +65,7 @@
 
     
 
-    
+<script src="./static/js/create-presentation.js"></script>    
 </body>
 
 </html>
