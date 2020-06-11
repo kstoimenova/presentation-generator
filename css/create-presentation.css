@@ -93,7 +93,7 @@ img {
     /* margin-top: 3%; */
     /* margin-left: 7%; */
     /* margin-right: 7%; */
-    height: 80%;
+    height: 660px;
     margin: 5% 10%;
 }
 
@@ -191,6 +191,7 @@ input[type="file"] {
 .code-comments {
     display: flex;
     flex-direction: column;
+    margin: 5% 5%;
 }
 
 .comment {
@@ -201,4 +202,8 @@ input[type="file"] {
 .code-heading {
     color: white;
     text-align: center;
+}
+
+.code-block {
+    margin-left: 5%;
 }

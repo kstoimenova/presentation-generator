@@ -58,11 +58,12 @@
             <div class="column-right">
                 <div class="code-container">
                     <h2 class="code-heading">Как да създадем презентация?</h2>                    
-                    <!-- <p class="info">Поредността на слайдовете в .json файла се запазва при генерирането на презентацията.</p> -->
+                    <p class="info">Поредността на слайдовете в .json файла се запазва при генерирането на презентацията.</p>
                     <div class="code-highlights">
+                    <div class="code-block">
                     <pre class="code">
                             <code>
-                                [
+[
         {
             "heading": "Solid",
             "type": "withText",
@@ -86,10 +87,13 @@
                 "description",
                 "Yeah, life is hard \n very hard"
                 ]
-            }
-            ]
+        }
+]
         </code>
     </pre>
+
+                    </div>    
+                    
                         <div class="code-comments">
                             <h2 class="code-heading">Легенда</h2>
                             <p class="comment">
@@ -97,7 +101,7 @@
                             </p>
                             <p class="comment">
 *type - тип на слайда,  
- под <br> формата на 
+ под формата на 
  текст, лист или код
                             </p>
                             <p class="comment">
