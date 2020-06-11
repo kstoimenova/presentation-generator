@@ -11,9 +11,7 @@
         <div class="header-content">
             <h1 class="heading">Генератор на презентации</h1>
             <div class="introduction">
-                <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                </p>
+                <h3>Качете вашата презентация в .json формат, а нашата система ще я стилизира и оформи автоматично!</h3>
             </div>
             <a href="create-presentation.php" class="upload-btn">Качи презентация</a>
         </div>
