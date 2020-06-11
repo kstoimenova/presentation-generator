@@ -26,8 +26,8 @@
                     <h1 class="heading">Създай презентация</h1>
                     <input type="text" id="heading" name="heading" placeholder="Заглавие" required>
                     <br>
-                    <select name="category" id="category">
-                        <option value="category" disabled selected  >Категория</option>
+                    <select name="category" id="category" required>
+                        <option value="" disabled selected hidden>Категория</option>
                         <?php
                                 foreach ($categories as $category) {
                                         ?>
@@ -39,7 +39,7 @@
                     <div class="row">
                         <div class="column-left">
                             <br>
-                            <input type="file" id="file" name="fileToUpload" placeholder="Файл с презентация">
+                            <input type="file" id="file" name="fileToUpload" placeholder="Файл с презентация" required>
                         </div>
                         <div class="column-right">
                         <br>
