@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Създай презентация</title>
+    <link rel="shortcut icon" href="static/images/favicon-32x32.png">
     <link rel="stylesheet" href="../css/create-presentation.css">
 </head>
 
@@ -45,6 +46,7 @@
                             </label>
                             <span id="file-name">Не е избран файл</span>
                         </div>
+                        <span id="file-error-message"></span>
                         <br>
                         <input type="submit" value="Генерирай" class="btn">
 
@@ -126,7 +128,8 @@
 
     
 
-<script src="./static/js/create-presentation.js"></script>    
+<script src="./static/js/create-presentation.js"></script>
+<script src="./static/js/json-validation.js"></script>    
 </body>
 
 </html>

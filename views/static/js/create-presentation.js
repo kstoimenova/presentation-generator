@@ -2,7 +2,7 @@ document.getElementById('file-upload').addEventListener("change", showElementNam
 
 function showElementName() {
     let fileInput = document.getElementById("file-upload");
-    var fileName = fileInput.files[0].name;
+    let fileName = fileInput.files[0].name;
     document.getElementById('file-name').innerHTML = fileName;
 
 }
