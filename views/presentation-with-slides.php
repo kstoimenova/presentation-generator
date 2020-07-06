@@ -30,6 +30,7 @@
     <title>Presentation</title>
 </head>
 <body>
+
 <!-- presentation content -->
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -39,10 +40,15 @@
 </div>
 
 <!-- navbar -->
-<?php
-    require_once "./navbar.html";
-?>
+<nav>
+  <ul>
+    <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i>Начална страница</a></li>
+    <li style="float:right"><a href="../utils/export.php?presentationId=<?php echo $presentationId?>" target="_blank">Свали PDF</a></li>
+    <li style="float:right"><button class="openbtn" onclick="openNav()">☰ Съдържание</button></li>
+  </ul>
+</nav>
 
+<!-- presentation -->
 <div id="main">
 
     <div class="content">

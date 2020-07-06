@@ -14,22 +14,12 @@ define("FILE_MAX_SIZE", 50000000);
 
 function uploadFile(&$valid, &$errors)
 {
-    $target_dir = "./uploads/"; // TODO: change this
+    $target_dir = "./uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
 
     if ($_FILES["fileToUpload"]["tmp_name"] !== "") {
-
-        // TODO: delete if not necessary
-        // Check if image file is a actual image or fake image
-        // if (isset($_POST["submit"])) {
-        //     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-        //     if ($check === false) {
-        //         $errors[$imageFileType] = "Файлът не е изображение.";
-        //         return "";
-        //     }
-        // }
 
         // Check if file already exists
         if (file_exists($target_file)) {

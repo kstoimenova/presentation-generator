@@ -1,7 +1,7 @@
 body {
   background-color: #ff4d4d;
   background-image: linear-gradient(to right, #ff4d4d, #9900cc);
-  font-family: "Verdana", sans-serif;
+  font-family: "DejaVu Sans", sans-serif;
   margin: 0;
 }
 
@@ -99,8 +99,8 @@ li a:hover:not(.active) {
 
 .content {
   background-color: whitesmoke;
-  width: 90%;
-  margin: 3%;
+  /* width: 90%; */
+  margin: 30px;
   border: 2px solid rgb(14, 13, 13);
   padding: 25px;
   border-radius: 50px 20px;
