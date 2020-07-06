@@ -21,7 +21,7 @@ function validateSlide(slide, index) {
 
 function validateHeading(slide, index) {
     if (!slide.hasOwnProperty("heading")) {
-        document.getElementById('file-error-message').innerHTML = "Слайд " + index + " няма заглавие. Заглавието е задължително."
+        document.getElementById('file-error-message').innerHTML = "Слайд " + index + " няма заглавие."
         return false;
     }
     return true;
@@ -29,9 +29,9 @@ function validateHeading(slide, index) {
 
 function validateType(slide, index) {
     if (!slide.hasOwnProperty("type")) {
-        document.getElementById('file-error-message').innerHTML = "Слайд " + index + " няма тип. Типът е задължителен."
+        document.getElementById('file-error-message').innerHTML = "Слайд " + index + " няма тип."
         return false;
-    } else if (!["withText", "withCodeBlock", "withList"].includes(slide.type)) {
+    } else if (!["withText", "withCodeblock", "withList"].includes(slide.type)) {
         document.getElementById('file-error-message').innerHTML = "Tипът " + slide.type + " на слайд " + index + " е невалиден."
         return false;
     } else if (!slide.hasOwnProperty(getTypeProperty(slide.type))) {

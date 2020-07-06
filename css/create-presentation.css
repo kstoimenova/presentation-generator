@@ -201,10 +201,11 @@ input[type="file"] {
 #file-error-message {
     color: red;
     display: inline-block;
-    font-size: 17px;
+    font-size: 1em;
     line-height: 15px;
     margin: 5px 0 0;
     margin-left: 1%;
     margin-top: 2%;
     font-weight: 600;
+    overflow-wrap: break-word;
 }
