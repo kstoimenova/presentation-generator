@@ -28,6 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/presentation-with-slides.css" />
     <title>Presentation</title>
+    <link rel="shortcut icon" href="static/images/favicon-32x32.png">
 </head>
 <body>
 <!-- presentation content -->

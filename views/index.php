@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentation Generator</title>
+    <link rel="shortcut icon" href="static/images/favicon-32x32.png">
     <link href="../css/index.css" rel="stylesheet">
 </head>
 <body>
