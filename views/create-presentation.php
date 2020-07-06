@@ -45,6 +45,7 @@
                             </label>
                             <span id="file-name">Не е избран файл</span>
                         </div>
+                        <span id="file-error-message"></span>
                         <br>
                         <input type="submit" value="Генерирай" class="btn">
 
@@ -126,7 +127,8 @@
 
     
 
-<script src="./static/js/create-presentation.js"></script>    
+<script src="./static/js/create-presentation.js"></script>
+<script src="./static/js/json-validation.js"></script>    
 </body>
 
 </html>
