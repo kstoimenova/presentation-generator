@@ -17,10 +17,6 @@ nav > ul {
   background: rgba(0, 0, 0, 0.6);
 }
 
-nav > ul > li {
-  float: left;
-}
-
 nav > ul > li a {
   display: block;
   color: white;
@@ -69,17 +65,34 @@ li a:hover:not(.active) {
   margin-left: 50px;
 }
 
-.openbtn {
+.openBtn, .exportBtn {
   font-size: 20px;
   cursor: pointer;
   background-color: #4e123c;
   color: white;
   padding: 10px 15px;
-  border: none;
+  border: 1px solid #999;
+  border-radius: 20px 20px;
 }
 
-.openbtn:hover {
-  background-color: #ff6699;
+.openBtn, .exportBtn {
+  float: right;
+}
+
+.openBtn:hover {
+  background-color: #895194;
+}
+
+.homeBtn {
+  float: left;
+}
+
+.homeBtn:hover {
+  background-color: #895194;
+}
+
+.exportBtn:hover {
+  background-color: #895194;
 }
 
 /* presentation and slides */
@@ -94,7 +107,6 @@ li a:hover:not(.active) {
 
 #main {
   transition: margin-right 0.5s;
-  padding: 16px;
 }
 
 .content {

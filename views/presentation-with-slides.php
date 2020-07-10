@@ -40,18 +40,19 @@
     </ol>
 </div>
 
-<!-- navbar -->
-<nav>
-  <ul>
-    <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i>Начална страница</a></li>
-    <li style="float:right"><a href="../utils/export.php?presentationId=<?php echo $presentationId?>" target="_blank">Свали PDF</a></li>
-    <li style="float:right"><button class="openbtn" onclick="openNav()">☰ Съдържание</button></li>
-  </ul>
-</nav>
-
 <!-- presentation -->
 <div id="main">
 
+    <!-- navbar -->
+    <nav>
+      <ul>
+        <li><a class="homeBtn" href="./index.php"><span><img src="./static/images/favicon-32x32.png"></span></a></li>
+        <li><a class="exportBtn" href="../utils/export.php?presentationId=<?php echo $presentationId?>" target="_blank">Свали в PDF формат</a></li>
+        <li><button class="openBtn" onclick="openNav()">☰ Съдържание</button></li>
+      </ul>
+    </nav>
+
+    <!-- content -->
     <div class="content">
     <h1 class="heading"><?php echo $presentation->getName(); ?></h1>
     <?php if (count($slides) == 0) echo 'This presentation has no slides.'; ?>

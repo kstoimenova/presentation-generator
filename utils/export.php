@@ -14,8 +14,7 @@ if (isset($_GET['presentationId'])) {
     $dompdf->set_option('enable_css_float', true);
     $dompdf->set_option('enable_html5_parser', true);
 
-    $presentationId = $_GET['presentationId'];
-    $url = 'http://localhost/presentation-generator/views/presentation-with-slides.php?id='.$presentationId;
+    $url = $_SERVER['HTTP_REFERER'];
 
     // Load content from html file
     // $html = file_get_contents($url);
