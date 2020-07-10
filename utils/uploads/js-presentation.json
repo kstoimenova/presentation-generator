@@ -1,6 +1,6 @@
 [{
         "heading": "Scope в JavaScript",
-        "type": "withCodeBlock",
+        "type": "withCodeblock",
         "codeblock": "var x = 3, y = 5\n function test (){\n if (true) {\n var y = 6;\n }\n console.log(y); // 6\n z = 8;\n for (var i = 0; i < 10; i++){\n  // do something\n }\n console.log(i); // 10\n }\ntest();\n console.log(i); // undefined\n console.log(x, y, z); // 3 5 8"
     },
     {
