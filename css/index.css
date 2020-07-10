@@ -8,10 +8,6 @@ body {
     margin: 0;
 }
 
-h3 {
-    font-style: italic;
-}
-
 
 /* header */
 
@@ -29,6 +25,33 @@ header {
     font-weight: 900;
     font-size: 42px;
     text-transform: uppercase;
+}
+
+.heading:hover {
+    animation: moving 0.5s;
+}
+
+h3 {
+    font-style: italic;
+}
+
+h3:hover {
+    animation: moving 0.5s;
+}
+
+@keyframes moving {
+    0% {
+        transform: translateY(0%);
+    }
+    25% {
+        transform: translateY(10%);
+    }
+    75% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 .introduction {
