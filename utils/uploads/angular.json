@@ -1,0 +1,28 @@
+[{
+        "heading": "Какво е Angular?",
+        "type": "withText",
+        "text": "Angular е фреймуърк за създаване и проектиране на ефективни и сложни single-page приложения. Angular е част от JavaScript екосистемата. Този open-source софтуер е представен от Google през 2009 г. и официално пуснат през 2010г. Angular платформата използва HTML и TypeScript, като Angular е написан на TypeScript."
+    },
+{
+        "heading": "Основни компоненти",
+        "type": "withList",
+        "list": [
+            "Архитектура",
+            "Модули",
+            "Компоненти",
+            "Сървис (Service)",
+            "Dependency Injection",
+            "Angular CLI"
+        ]
+    },
+    {
+        "heading": "Примерен код",
+        "type": "withCodeblock",
+        "codeblock":"@Component({\n selector: 'app-hero-list',\n templateUrl: './hero-list.component.html',\n providers: [ HeroService ]\n })\n export class HeroListComponent implements OnInit {\n /* . . . */\n }"
+    },
+    {
+        "heading": "Недостатъци",
+        "type": "withText",
+        "text": "Angular е доста голям и сложен фреймуърк със собствена философия, която може да бъде предизвикателство за начинаещите, докато свикнат. Научаването на концепциите на фреймуърка обаче не е единствената задача. Освен с концепциите на Angular, трябва да се запознати и с други допълнителни технологии: Angular CLI, Augury - инструмент за отстраняване на грешки, Jasmine и Protractor - инструменти за тестване."
+    }
+]

@@ -12,7 +12,7 @@ CREATE TABLE `slides` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `presentation_id` int,
   `heading` varchar(255),
-  `text_area` text DEFAULT NULL,
+  `text_area` longtext DEFAULT NULL,
   `list_json` json DEFAULT NULL,
   `codeblock` text DEFAULT NULL,
   `photo` varchar(255) DEFAULT NULL,
