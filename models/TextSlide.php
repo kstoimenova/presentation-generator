@@ -21,7 +21,10 @@ class TextSlide extends BaseSlide implements Slide {
 
     public function getHtmlLayout() {
         return '<section class="slide" id="'.$this->getId().'">
-        <h2>' . $this->getHeading() . '</h2>
+        <div class="slide-header">
+            <h2>' . $this->getHeading() . '</h2>
+            <a class="edit-icon" href="./edit-slide.php?id='.$this->getId().'&presentationId='.$this->getPresentationId().'"><span><i class="fa fa-pencil-square-o"></i></span></a>
+        </div>
         <p>' .  $this->getText() . '</p>
      </section>';
     }
