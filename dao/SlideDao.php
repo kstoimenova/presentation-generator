@@ -79,4 +79,52 @@ class SlideDao
         }
         
     }
+
+    public function getSlideById($id){
+        try{
+            $sql = "SELECT id, presentation_id, heading, text_area, list_json, codeblock, photo, ordering, type_id
+                FROM slides
+                WHERE id = :id";
+            $stmt = self::$db->getConnection()->prepare($sql);
+            $stmt->execute(['id' => $id]);
+
+            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+            $slide;
+            switch ($row['type_id']) {
+                case 1:
+                    $slide = new TextSlide($row['id'], $row['presentation_id'], $row['heading'], $row['ordering'], $row['text_area']);
+                break;
+                case 2:
+                    $slide = new ListSlide($row['id'], $row['presentation_id'], $row['heading'], $row['ordering'], $row['list_json']);
+                break;
+                case 3:
+                    $slide = new CodeSlide($row['id'], $row['presentation_id'], $row['heading'], $row['ordering'], $row['codeblock']);
+                break;
+                default:
+                echo 'Not supported slyde type';
+                break;
+            }
+
+        } catch(\PDOException $e){
+            throw $e;
+        }
+
+        return $slide;
+        
+    }
+
+    public function updateSlide($id, $heading, $text){
+        try { 
+            $sql = "UPDATE slides 
+                    SET heading = :heading,
+                        text_area = :text
+                    WHERE id= :id";
+                    
+            $stmt = self::$db->getConnection()->prepare($sql);
+            $stmt->execute(['heading' => $heading, 'text' => $text, 'id' => $id]);
+
+        } catch(\PDOException $e){
+            throw $e;
+        }
+    }
 }
