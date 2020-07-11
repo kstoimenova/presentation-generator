@@ -35,4 +35,8 @@ class BaseSlide {
     public function getType() {
         return $this->type;
     }
+
+    public function setHeading($heading) {
+        $this->heading=$heading;
+    }
 }

@@ -8,7 +8,6 @@ function validate(json) {
 
         index++;
     })
-    debugger
 
     if (isValid) {
         document.getElementById('file-error-message').innerHTML = ''
