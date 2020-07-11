@@ -47,8 +47,9 @@
     <nav>
       <ul>
         <li><a class="homeBtn" href="./index.php"><span><img src="./static/images/favicon-32x32.png"></span></a></li>
-        <li><a class="exportBtn" href="../utils/export.php?presentationId=<?php echo $presentationId?>" target="_blank">Свали в PDF формат</a></li>
         <li><button class="openBtn" onclick="openNav()">☰ Съдържание</button></li>
+        <li><a class="exportBtn" href="../utils/export.php?presentationId=<?php echo $presentationId?>" target="_blank">Свали в PDF формат</a></li>
+        <li class="tooltip"><a id="fullscreenBtn"><img src="./static/images/toggle-full-screen.png"></a><span class="tooltiptext">Toggle full screen</span></li>
       </ul>
     </nav>
 
@@ -64,5 +65,6 @@
 </div>
 
     <script src="./static/js/content-sidebar.js"></script>
+    <script src="./static/js/toggle-fullscreen.js"></script>
 </body>
 </html>
