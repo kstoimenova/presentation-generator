@@ -92,6 +92,12 @@ img {
     margin: 5% 5%;
 }
 
+.edit-form {
+    margin-left: 17%;
+    margin-right: 17%;
+    padding: 0% 0% 9% 0%;
+}
+
 .header {
     padding-left: 15px;
     padding-top: 15px;

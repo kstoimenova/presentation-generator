@@ -44,7 +44,7 @@
       </ul>
     </nav>
 
-    <div class="frame">
+    <div class="frame edit-form">
         <!-- <div class="row"> -->
             <!-- <div class="column-left"> -->
                 <form action="../utils/edit-slide.php?id=<?php echo $slideId?>&presentationId=<?php echo $presentationId?>" id="form" method="POST" enctype="multipart/form-data">
