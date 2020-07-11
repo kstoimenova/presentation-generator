@@ -34,4 +34,12 @@ class PresentationController {
 
         return $id;
     }
+
+    public function getParamFromUrl($parameter) {
+        $queries = array();
+        parse_str($_SERVER['QUERY_STRING'], $queries);
+        $id = $queries[$parameter];
+
+        return $id;
+    }
 }
