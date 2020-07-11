@@ -43,7 +43,7 @@
       </ul>
     </nav>
 
-    <div class="frame">
+    <div class="frame edit-form">
                 <form action="../utils/edit-slide.php?id=<?php echo $slideId?>&presentationId=<?php echo $presentationId?>" id="form" method="POST" enctype="multipart/form-data">
                     <h1 class="heading">Редактирай слайд</h1>
                     <input type="text" id="heading" value="<?php echo $slide->getHeading()?>" name="heading" placeholder="Заглавие" required>

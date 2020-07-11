@@ -6,6 +6,7 @@
     <title>Presentation Generator</title>
     <link rel="shortcut icon" href="static/images/favicon-32x32.png">
     <link href="../css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -14,7 +15,8 @@
             <div class="introduction">
                 <h3>Качете вашата презентация в .json формат, а нашата система ще я стилизира и оформи автоматично!</h3>
             </div>
-            <a href="create-presentation.php" class="upload-btn">Качи презентация</a>
+            <a href="create-presentation.php" class="upload-btn">Качи презентация 
+            <i class="fa fa-cloud-upload"></i></a>
         </div>
     </header>
 
