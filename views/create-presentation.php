@@ -20,6 +20,9 @@
 </head>
 
 <body>
+    <div class="nav-bar">
+            <a class="homeBtn nav-item" href="./index.php"><span><img src="./static/images/favicon-32x32.png"></span></a>    
+    </div>
 <div class="frame">
         <div class="row">
             <div class="column-left">
@@ -52,10 +55,6 @@
 
                     </div>   
                 </form>
-                <!-- <div class="img-container">
-                    <img src="static/images/add-presentation.jpg" alt="">
-                    <div class="bottom-right">Presentations made easy.</div>
-                </div> -->
             </div>
             <div class="column-right">
                 <div class="code-container">

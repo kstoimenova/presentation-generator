@@ -33,7 +33,6 @@
 </head>
 <body>
 
-<!-- presentation -->
 <div id="main">
 
     <!-- navbar -->
@@ -45,8 +44,6 @@
     </nav>
 
     <div class="frame">
-        <!-- <div class="row"> -->
-            <!-- <div class="column-left"> -->
                 <form action="../utils/edit-slide.php?id=<?php echo $slideId?>&presentationId=<?php echo $presentationId?>" id="form" method="POST" enctype="multipart/form-data">
                     <h1 class="heading">Редактирай слайд</h1>
                     <input type="text" id="heading" value="<?php echo $slide->getHeading()?>" name="heading" placeholder="Заглавие" required>
@@ -55,15 +52,6 @@
                     <br>
                     <input type="submit" value="Запази" class="btn">   
                 </form>
-                
-            <!-- </div> -->
-            <!-- <div class="column-right">
-                <div class="img-container">
-                    <img src="static/images/add-presentation.jpg" alt="">
-                    <div class="bottom-right">Presentations made easy.</div>
-                </div> -->
-
-            <!-- </div> -->
         
     </div>
     </div>

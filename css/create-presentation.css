@@ -14,6 +14,7 @@ select {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 textarea {
@@ -89,7 +90,7 @@ img {
 .frame {
     background-color: rgba(0, 0, 0, 0.6);
     height: fit-content;
-    margin: 5% 5%;
+    margin: 2% 5%;
 }
 
 .header {
@@ -213,4 +214,18 @@ input[type="file"] {
     margin-top: 2%;
     font-weight: 600;
     overflow-wrap: break-word;
+}
+
+.nav-bar {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    background-color: #4e123c;
+    padding-bottom: 1%;
+    padding-top: 0.5%;
+}
+
+.nav-item {
+    margin-left: 1%;
+    width: 2%;
 }
