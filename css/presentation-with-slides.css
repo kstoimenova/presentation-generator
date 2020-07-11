@@ -1,184 +1,203 @@
 body {
-  background-color: #ff4d4d;
-  background-image: linear-gradient(to right, #ff4d4d, #9900cc);
-  font-family: "DejaVu Sans", sans-serif;
-  margin: 0;
+    background-color: #ff4d4d;
+    background-image: linear-gradient(to right, #ff4d4d, #9900cc);
+    font-family: "DejaVu Sans", sans-serif;
+    margin: 0;
 }
+
 
 /* navbar */
 
-nav > ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #ff4d4d;
-  background-image: linear-gradient(to right, #ff4d4d, #9900cc);
-  background: rgba(0, 0, 0, 0.6);
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ff4d4d;
+    background-image: linear-gradient(to right, #ff4d4d, #9900cc);
+    background: rgba(0, 0, 0, 0.6);
 }
 
-nav > ul > li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+nav>ul>li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #895194;
+    background-color: #895194;
 }
+
 
 /* sidebar */
 
 .sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  right: 0px;
-  z-index: 1;
-  top: 0;
-  background-color: rgb(68, 10, 73);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    right: 0px;
+    z-index: 1;
+    top: 0;
+    background-color: rgb(68, 10, 73);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
 .sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #dfdddd;
-  display: block;
-  transition: 0.3s;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #dfdddd;
+    display: block;
+    transition: 0.3s;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+    color: #f1f1f1;
 }
 
 .sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
-.openBtn, .exportBtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #4e123c;
-  color: white;
-  padding: 10px 15px;
-  border: 1px solid #999;
-  border-radius: 20px 20px;
+.openBtn,
+.exportBtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #4e123c;
+    color: white;
+    padding: 10px 15px;
+    border: 1px solid #999;
+    border-radius: 20px 20px;
 }
 
-.openBtn, .exportBtn {
-  float: right;
+.openBtn,
+.exportBtn {
+    float: right;
 }
 
 .openBtn:hover {
-  background-color: #895194;
+    background-color: #895194;
 }
 
 .homeBtn {
-  float: left;
+    float: left;
 }
 
 .tooltip {
-  float: right;
-  position: relative;
+    float: right;
+    position: relative;
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: rgb(50, 42, 71);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: -0.5px;
-  right: 110%;
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(50, 42, 71);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -0.5px;
+    right: 110%;
 }
 
 .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  margin-top: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent transparent #895194;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #895194;
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
-  background-color: #895194;
+    visibility: visible;
+    background-color: #895194;
 }
+
 
 /* presentation and slides */
 
 .heading {
-  color: rgb(0, 0, 0);
-  text-align: center;
-  font-weight: 900;
-  font-size: 42px;
-  text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 900;
+    font-size: 42px;
+    text-transform: uppercase;
 }
 
 #main {
-  transition: margin-right 0.5s;
+    transition: margin-right 0.5s;
 }
 
 .content {
-  background-color: whitesmoke;
-  /* width: 90%; */
-  margin: 30px;
-  border: 2px solid rgb(14, 13, 13);
-  padding: 25px;
-  border-radius: 50px 20px;
+    background-color: whitesmoke;
+    /* width: 90%; */
+    margin: 30px;
+    border: 2px solid rgb(14, 13, 13);
+    padding: 25px;
+    border-radius: 50px 20px;
 }
 
 .code {
-  background-color: #eee;
-  border: 1px solid #999;
-  border-radius: 50px 20px;
-  color: rgb(43, 39, 39);
-  display: block;
-  padding: 20px;
-  overflow-wrap: break-word;
+    background-color: #eee;
+    border: 1px solid #999;
+    border-radius: 50px 20px;
+    color: rgb(43, 39, 39);
+    display: block;
+    padding: 20px;
+    overflow-wrap: break-word;
 }
 
 code {
-  font-size: 1.5vw;
+    font-size: 1.5vw;
 }
 
 .slide {
-  display: block;
-  margin-bottom: 30px;
-  max-width: 80%;
-  overflow-x: auto;
-  font-size: 20px;
+    display: block;
+    margin-bottom: 30px;
+    max-width: 80%;
+    overflow-x: auto;
+    font-size: 20px;
 }
 
 .slide:hover {
-  border: 1px rgb(194, 172, 172);
-  border-radius: 10px;
-  background-color:  rgba(231, 210, 247, 0.384);
+    border: 1px rgb(194, 172, 172);
+    border-radius: 10px;
+    background-color: rgba(231, 210, 247, 0.384);
 }
 
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
 @media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
-  .sidebar a {
-    font-size: 18px;
-  }
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+.slide-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-icon {
+    margin-top: 2.5%;
+    font-size: 32px;
+    color: #4e123c;
+    margin-right: 2%;
 }

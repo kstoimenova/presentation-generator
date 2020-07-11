@@ -8,11 +8,16 @@ body {
 }
 
 input[type=text],
+textarea,
 select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
 }
 
 .invalid {
